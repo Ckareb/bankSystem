@@ -3,7 +3,15 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>16388||-9223372036854775808|c|G
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G
+16388||-9223372036854775808|c|G
 16388||10|c|G
 16388||16389|c|G
 16388||10|C|G
@@ -11,9 +19,9 @@
 16388||-9223372036854775808|T|G
 16388||10|T|G
 16388||16389|T|G</Grants>
-      <IntrospectionStateNumber>1173</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1178</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
-      <StartupTime>1728733271</StartupTime>
+      <StartupTime>1728926750</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -809,7 +817,7 @@ false Zulu
 14650||10|C|G
 14650||-9223372036854775808|U|G
 14650||10|U|G</Grants>
-      <IntrospectionStateNumber>1173</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1178</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4270,19 +4278,6 @@ false Zulu
 16402||16389|t|G
 16402||16389|D|G
 16402||16389|w|G
-16641||16389|r|G
-16641||16389|w|G
-16641||16389|U|G
-16642||16389|d|G
-16642||16389|a|G
-16642||16389|x|G
-16642||16389|r|G
-16642||16389|t|G
-16642||16389|D|G
-16642||16389|w|G
-16669||16389|r|G
-16669||16389|w|G
-16669||16389|U|G
 16686||10|r|G
 16686||16389|r|G
 16686||10|w|G
@@ -4299,8 +4294,8 @@ false Zulu
 16687||10|D|G
 16687||10|w|G
 16687||16389|w|G</Grants>
-      <IntrospectionStateNumber>1173</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-13.21:27:31</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1178</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-14.20:12:58</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>826</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4357,67 +4352,39 @@ false Zulu
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="273" parent="266" name="moneyaccount_12345678912345678912_id_seq">
-      <ObjectId>16669</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1141</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>username</OwnerName>
-    </sequence>
-    <sequence id="274" parent="266" name="moneyaccount_33213214321432144121_id_seq">
-      <ObjectId>16641</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1141</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>username</OwnerName>
-    </sequence>
-    <table id="275" parent="266" name="accounts">
+    <table id="273" parent="266" name="accounts">
       <ObjectId>16402</ObjectId>
       <StateNumber>1110</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>username</OwnerName>
     </table>
-    <table id="276" parent="266" name="archive_moneyaccount_32132132132132132121">
+    <table id="274" parent="266" name="archive_moneyaccount_32132132132132132121">
       <ObjectId>16812</ObjectId>
       <StateNumber>1168</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>username</OwnerName>
     </table>
-    <table id="277" parent="266" name="archived_account">
+    <table id="275" parent="266" name="archived_account">
       <ObjectId>16687</ObjectId>
       <StateNumber>1157</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="278" parent="266" name="customers">
+    <table id="276" parent="266" name="customers">
       <ObjectId>16391</ObjectId>
       <StateNumber>1017</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="279" parent="266" name="moneyaccount_12345678912345678912">
-      <ObjectId>16670</ObjectId>
-      <StateNumber>1071</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>username</OwnerName>
-    </table>
-    <table id="280" parent="266" name="moneyaccount_33213214321432144121">
-      <ObjectId>16642</ObjectId>
-      <StateNumber>1093</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>username</OwnerName>
-    </table>
-    <argument id="281" parent="267">
+    <argument id="277" parent="267">
       <ArgumentDirection>R</ArgumentDirection>
       <StoredType>trigger|0s</StoredType>
     </argument>
-    <argument id="282" parent="268">
+    <argument id="278" parent="268">
       <ArgumentDirection>R</ArgumentDirection>
       <StoredType>trigger|0s</StoredType>
     </argument>
-    <column id="283" parent="275" name="id">
+    <column id="279" parent="273" name="id">
       <DefaultExpression>nextval(&apos;accounts_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4426,7 +4393,7 @@ false Zulu
       <SequenceId>16401</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="284" parent="275" name="nameaccount">
+    <column id="280" parent="273" name="nameaccount">
       <DefaultExpression>20</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
@@ -4434,46 +4401,46 @@ false Zulu
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="285" parent="275" name="namebank">
+    <column id="281" parent="273" name="namebank">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>787</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="286" parent="275" name="typeaccount">
+    <column id="282" parent="273" name="typeaccount">
       <Position>5</Position>
       <StateNumber>787</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="287" parent="275" name="opendate">
+    <column id="283" parent="273" name="opendate">
       <Position>6</Position>
       <StateNumber>787</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="288" parent="275" name="accountcurrency">
+    <column id="284" parent="273" name="accountcurrency">
       <Position>7</Position>
       <StateNumber>787</StateNumber>
       <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="289" parent="275" name="customer_id">
+    <column id="285" parent="273" name="customer_id">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>787</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="290" parent="275" name="fk_customer">
+    <foreign-key id="286" parent="273" name="fk_customer">
       <ColNames>customer_id</ColNames>
       <ObjectId>16408</ObjectId>
       <StateNumber>787</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16391</RefTableId>
     </foreign-key>
-    <index id="291" parent="275" name="accounts_pkey">
+    <index id="287" parent="273" name="accounts_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16406</ObjectId>
@@ -4482,7 +4449,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="292" parent="275" name="unique_name_account">
+    <index id="288" parent="273" name="unique_name_account">
       <ColNames>nameaccount</ColNames>
       <ObjectId>16616</ObjectId>
       <StateNumber>1013</StateNumber>
@@ -4492,25 +4459,25 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="293" parent="275" name="accounts_pkey">
+    <key id="289" parent="273" name="accounts_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16407</ObjectId>
       <Primary>1</Primary>
       <StateNumber>787</StateNumber>
       <UnderlyingIndexId>16406</UnderlyingIndexId>
     </key>
-    <key id="294" parent="275" name="unique_name_account">
+    <key id="290" parent="273" name="unique_name_account">
       <ObjectId>16617</ObjectId>
       <StateNumber>1013</StateNumber>
       <UnderlyingIndexId>16616</UnderlyingIndexId>
     </key>
-    <security-policy id="295" parent="275" name="block_account_policy">
+    <security-policy id="291" parent="273" name="block_account_policy">
       <ObjectId>16685</ObjectId>
       <Permissive>1</Permissive>
       <StateNumber>1101</StateNumber>
       <UsingExpression>((nameaccount)::text &lt;&gt; &apos;32132132132132132121&apos;::text)</UsingExpression>
     </security-policy>
-    <column id="296" parent="276" name="id">
+    <column id="292" parent="274" name="id">
       <DefaultExpression>nextval(&apos;archive_moneyaccount_32132132132132132121_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4519,35 +4486,35 @@ false Zulu
       <SequenceId>16811</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="297" parent="276" name="nameaccount">
+    <column id="293" parent="274" name="nameaccount">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1168</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="298" parent="276" name="historyaccount">
+    <column id="294" parent="274" name="historyaccount">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1168</StateNumber>
       <StoredType>varchar(256)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="299" parent="276" name="timechange">
+    <column id="295" parent="274" name="timechange">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>4</Position>
       <StateNumber>1168</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="300" parent="276" name="countaccount">
+    <column id="296" parent="274" name="countaccount">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1168</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <index id="301" parent="276" name="archive_moneyaccount_32132132132132132121_pkey">
+    <index id="297" parent="274" name="archive_moneyaccount_32132132132132132121_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16817</ObjectId>
@@ -4556,14 +4523,14 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="302" parent="276" name="archive_moneyaccount_32132132132132132121_pkey">
+    <key id="298" parent="274" name="archive_moneyaccount_32132132132132132121_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16818</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1168</StateNumber>
       <UnderlyingIndexId>16817</UnderlyingIndexId>
     </key>
-    <column id="303" parent="277" name="id">
+    <column id="299" parent="275" name="id">
       <DefaultExpression>nextval(&apos;archived_account_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4572,52 +4539,52 @@ false Zulu
       <SequenceId>16686</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="277" name="nameaccount">
+    <column id="300" parent="275" name="nameaccount">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="305" parent="277" name="namebank">
+    <column id="301" parent="275" name="namebank">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="306" parent="277" name="typeaccount">
+    <column id="302" parent="275" name="typeaccount">
       <Position>4</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="307" parent="277" name="opendate">
+    <column id="303" parent="275" name="opendate">
       <Position>5</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="308" parent="277" name="accountcurrency">
+    <column id="304" parent="275" name="accountcurrency">
       <Position>6</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="309" parent="277" name="customer_id">
+    <column id="305" parent="275" name="customer_id">
       <Position>7</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="310" parent="277" name="archived_at">
+    <column id="306" parent="275" name="archived_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>8</Position>
       <StateNumber>1108</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="311" parent="277" name="archived_account_pkey">
+    <index id="307" parent="275" name="archived_account_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16694</ObjectId>
@@ -4626,7 +4593,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="312" parent="277" name="unique_nameaccount">
+    <index id="308" parent="275" name="unique_nameaccount">
       <ColNames>nameaccount</ColNames>
       <ObjectId>16712</ObjectId>
       <StateNumber>1125</StateNumber>
@@ -4636,19 +4603,19 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="313" parent="277" name="archived_account_pkey">
+    <key id="309" parent="275" name="archived_account_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16695</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1108</StateNumber>
       <UnderlyingIndexId>16694</UnderlyingIndexId>
     </key>
-    <key id="314" parent="277" name="unique_nameaccount">
+    <key id="310" parent="275" name="unique_nameaccount">
       <ObjectId>16713</ObjectId>
       <StateNumber>1125</StateNumber>
       <UnderlyingIndexId>16712</UnderlyingIndexId>
     </key>
-    <column id="315" parent="278" name="id">
+    <column id="311" parent="276" name="id">
       <DefaultExpression>nextval(&apos;customers_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4657,44 +4624,44 @@ false Zulu
       <SequenceId>16390</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="316" parent="278" name="name">
+    <column id="312" parent="276" name="name">
       <Position>2</Position>
       <StateNumber>752</StateNumber>
       <StoredType>varchar(30)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="317" parent="278" name="birthday">
+    <column id="313" parent="276" name="birthday">
       <Position>4</Position>
       <StateNumber>769</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="278" name="citybirths">
+    <column id="314" parent="276" name="citybirths">
       <Position>10</Position>
       <StateNumber>770</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="319" parent="278" name="seriesnumberpassport">
+    <column id="315" parent="276" name="seriesnumberpassport">
       <DefaultExpression>20</DefaultExpression>
       <Position>11</Position>
       <StateNumber>1017</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="320" parent="278" name="whygive">
+    <column id="316" parent="276" name="whygive">
       <Position>13</Position>
       <StateNumber>773</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="321" parent="278" name="giveday">
+    <column id="317" parent="276" name="giveday">
       <Position>14</Position>
       <StateNumber>774</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="322" parent="278" name="customers_pkey">
+    <index id="318" parent="276" name="customers_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16395</ObjectId>
@@ -4703,7 +4670,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="323" parent="278" name="unique_seriesnumberpassport">
+    <index id="319" parent="276" name="unique_seriesnumberpassport">
       <ColNames>seriesnumberpassport</ColNames>
       <ObjectId>16629</ObjectId>
       <StateNumber>1017</StateNumber>
@@ -4713,148 +4680,17 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="324" parent="278" name="customers_pkey">
+    <key id="320" parent="276" name="customers_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16396</ObjectId>
       <Primary>1</Primary>
       <StateNumber>752</StateNumber>
       <UnderlyingIndexId>16395</UnderlyingIndexId>
     </key>
-    <key id="325" parent="278" name="unique_seriesnumberpassport">
+    <key id="321" parent="276" name="unique_seriesnumberpassport">
       <ObjectId>16630</ObjectId>
       <StateNumber>1017</StateNumber>
       <UnderlyingIndexId>16629</UnderlyingIndexId>
     </key>
-    <column id="326" parent="279" name="id">
-      <DefaultExpression>nextval(&apos;moneyaccount_12345678912345678912_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1071</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>16669</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="327" parent="279" name="nameaccount">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1071</StateNumber>
-      <StoredType>varchar(20)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="328" parent="279" name="historyaccount">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1071</StateNumber>
-      <StoredType>varchar(256)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="329" parent="279" name="timechange">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>4</Position>
-      <StateNumber>1071</StateNumber>
-      <StoredType>timestamp|0s</StoredType>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="330" parent="279" name="countaccount">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>1071</StateNumber>
-      <StoredType>double precision|0s</StoredType>
-      <TypeId>701</TypeId>
-    </column>
-    <foreign-key id="331" parent="279" name="moneyaccount_12345678912345678912_nameaccount_fkey">
-      <ColNames>nameaccount</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16677</ObjectId>
-      <OnDelete>restrict</OnDelete>
-      <StateNumber>1071</StateNumber>
-      <RefKeyColPositions>2</RefKeyColPositions>
-      <RefTableId>16402</RefTableId>
-    </foreign-key>
-    <index id="332" parent="279" name="moneyaccount_12345678912345678912_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16675</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1071</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="333" parent="279" name="moneyaccount_12345678912345678912_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16676</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1071</StateNumber>
-      <UnderlyingIndexId>16675</UnderlyingIndexId>
-    </key>
-    <column id="334" parent="280" name="id">
-      <DefaultExpression>nextval(&apos;moneyaccount_33213214321432144121_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1026</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>16641</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="335" parent="280" name="nameaccount">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1026</StateNumber>
-      <StoredType>varchar(20)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="336" parent="280" name="historyaccount">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1026</StateNumber>
-      <StoredType>varchar(256)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="337" parent="280" name="timechange">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>4</Position>
-      <StateNumber>1026</StateNumber>
-      <StoredType>timestamp|0s</StoredType>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="338" parent="280" name="countaccount">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>1026</StateNumber>
-      <StoredType>double precision|0s</StoredType>
-      <TypeId>701</TypeId>
-    </column>
-    <foreign-key id="339" parent="280" name="moneyaccount_33213214321432144121_nameaccount_fkey">
-      <ColNames>nameaccount</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16649</ObjectId>
-      <OnDelete>restrict</OnDelete>
-      <StateNumber>1026</StateNumber>
-      <RefKeyColPositions>2</RefKeyColPositions>
-      <RefTableId>16402</RefTableId>
-    </foreign-key>
-    <index id="340" parent="280" name="moneyaccount_33213214321432144121_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16647</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1026</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="341" parent="280" name="moneyaccount_33213214321432144121_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16648</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1026</StateNumber>
-      <UnderlyingIndexId>16647</UnderlyingIndexId>
-    </key>
-    <trigger id="342" parent="280" name="block_all_access">
-      <Events>IUD</Events>
-      <ObjectId>16684</ObjectId>
-      <StateNumber>1093</StateNumber>
-      <Turn>before-row</Turn>
-      <CallRoutineId>16583</CallRoutineId>
-    </trigger>
   </database-model>
 </dataSource>

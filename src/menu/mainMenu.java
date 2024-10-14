@@ -89,6 +89,7 @@ public class mainMenu {
         frame.setVisible(true);
 
 
+// создание докера для БД pg_dump -U username -F t banksystem > db_dump.tar
 //        System.out.println("Доступны следующие операции\n" +
 //                "1.Создать нового пользователя\n" +
 //                "2.Открыть новый счет\n" +
