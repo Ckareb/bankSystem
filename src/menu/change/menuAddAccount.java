@@ -57,7 +57,7 @@ public class menuAddAccount {
 
             // Цикл для проверки даты рождения
             while (input == null) {
-                if (inputField.getText().matches("\\d+")) {
+                if (inputField.getText().matches("\\d+(\\.\\d+)?")) {
                     input = Float.parseFloat(inputField.getText());
                 } else {
                     JOptionPane.showMessageDialog(frame, "Сумму");

@@ -17,4 +17,4 @@ git clone https://github.com/yourusername/bankSystem.git
 
 ### Восстановление базы данных
 Пример кода:
-`pg_restore -U username -d banksystem db_dump.tar`
+`docker exec -i my_postgres_db sh -c "pg_restore -U username -d banksystem" < db_dump.tar`
